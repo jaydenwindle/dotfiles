@@ -1,0 +1,11 @@
+session_name: 3-panes
+windows:
+    - window_name: dev window
+      layout: main-vertical
+      options:
+        main-pane-width: 140
+      panes:
+        - clear
+        - clear
+        - clear
+
