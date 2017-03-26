@@ -8,9 +8,27 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh tmux.conf tmuxp.yaml"    # list of files/folders to symlink in homedir
+files="bashrc vimrc zshrc tmux.conf tmuxp.yaml"    # list of files/folders to symlink in homedir
 
 ##########
+
+########## Functions 
+
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+##########
+
+# Install pre-req's
+# zsh
+sudo apt install zsh
+
+# vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
@@ -29,3 +47,4 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
