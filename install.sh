@@ -8,20 +8,10 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-dependencies="git curl zsh vim tmux python-pip"    # list of files/folders to symlink in homedir
 files="bashrc vimrc zshrc tmux.conf tmuxp.yaml vim tmux i3"    # list of files/folders to symlink in homedir
 directories="vim vim/backup_files vim/swap_files vim/undo_files tmux"    # list of folders to create 
 
 ##########
-
-# Install dependencies 
-echo "Installing dependencies"
-for dep in $dependencies; do
-    echo "  $dep"
-    sudo apt-get install $dep > /dev/null
-done
-echo -e "...done\n"
-
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
