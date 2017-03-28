@@ -9,7 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 dependencies="git curl zsh vim tmux python-pip"    # list of files/folders to symlink in homedir
-files="bashrc vimrc zshrc tmux.conf tmuxp.yaml vim tmux"    # list of files/folders to symlink in homedir
+files="bashrc vimrc zshrc tmux.conf tmuxp.yaml vim tmux i3"    # list of files/folders to symlink in homedir
 directories="vim vim/backup_files vim/swap_files vim/undo_files tmux"    # list of folders to create 
 
 ##########
