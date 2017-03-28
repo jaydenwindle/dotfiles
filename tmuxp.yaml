@@ -5,7 +5,7 @@ windows:
       options:
         main-pane-width: 140
       panes:
-        - clear
+        - vim 
         - clear
         - clear
 
