@@ -1,11 +1,13 @@
 session_name: 3-panes
 windows:
-    - window_name: dev window
-      layout: main-vertical
-      options:
-        main-pane-width: 140
-      panes:
-        - vim 
-        - clear
-        - clear
-
+  - window_name: dev
+    layout: main-vertical
+    panes:
+      - vim 
+  - window_name: shells
+    layout: tiled
+    panes: 
+      - 
+      - 
+      - 
+      - 
